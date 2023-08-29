@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "372157847778",
+    "firebase_url": "https://tictactoe-2c081.firebaseio.com",
+    "project_id": "tictactoe-2c081",
+    "storage_bucket": "tictactoe-2c081.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372157847778:android:698d6abc280499392b66bb",
+        "android_client_info": {
+          "package_name": "com.sachin.app.storyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372157847778-lou7o6kurt3ng0osbffa79sg44fnj1gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgeUAR7gzRgp1uMmowei0iBGCaiL-HG2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372157847778-lou7o6kurt3ng0osbffa79sg44fnj1gb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372157847778:android:468b7f52b24950312b66bb",
+        "android_client_info": {
+          "package_name": "com.sachin.app.tictactoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372157847778-lou7o6kurt3ng0osbffa79sg44fnj1gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgeUAR7gzRgp1uMmowei0iBGCaiL-HG2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372157847778-lou7o6kurt3ng0osbffa79sg44fnj1gb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

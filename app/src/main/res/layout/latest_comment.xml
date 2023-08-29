@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/card_background_color"
+    tools:showIn="@layout/fragment_read">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comments"
+            android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/latest_comment_user_image"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical"
+                app:shapeAppearance="@style/CircleShapeAppearance"
+                tools:src="@tools:sample/avatars" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/latest_comment_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textAppearance="?attr/textAppearanceBodySmall"
+                        android:textStyle="bold"
+                        tools:text="@tools:sample/full_names" />
+
+                    <TextView
+                        android:id="@+id/latest_comment_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceBodySmall"
+                        tools:text="Hello, this story it too good. Loved it!" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/add_comment_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/edittext_background"
+                    android:text="@string/add_a_comment"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="?android:textColorSecondary"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/expand_button"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_expand"
+                app:tint="?attr/colorOutline" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

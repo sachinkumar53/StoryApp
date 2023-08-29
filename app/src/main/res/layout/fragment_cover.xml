@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.write.CoverFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cover_card"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="?selectableItemBackground"
+                app:cardBackgroundColor="@color/edittext_background_color"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/cover_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/add_image_hint_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:alpha="0.5"
+                    android:drawablePadding="6dp"
+                    android:text="@string/add_cover_page"
+                    app:drawableTopCompat="@drawable/ic_add_circle" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cover_image_error_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textAppearance="?textAppearanceBodySmall"
+                android:textColor="?colorError"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_input_layout"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/title_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="center"
+                    android:hint="@string/story_title_hint"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingHorizontal="16dp"
+                    android:textAppearance="?attr/textAppearanceTitleLarge"
+                    app:layout_constraintBottom_toTopOf="@id/description_field"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cover_card" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/description_input_layout"
+                style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="always"
+                android:padding="0dp"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                app:counterEnabled="true"
+                app:counterMaxLength="500"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/description_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/edittext_background"
+                    android:gravity="top|center"
+                    android:hint="@string/story_description_hint"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/genre_input_layout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/genre_auto_complete_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_background"
+                    android:hint="@string/genre"
+                    android:padding="16dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/write_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:text="@string/proceed_to_write"
+        android:theme="@style/ThemeOverlay.Secondary.Button" />
+
+</LinearLayout>

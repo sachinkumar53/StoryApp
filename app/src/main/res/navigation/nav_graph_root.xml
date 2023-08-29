@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signupFragment">
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.sachin.app.storyapp.ui.singup.SignupFragment"
+        android:label="SignupFragment"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signup_to_login"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signup_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.sachin.app.storyapp.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_login_to_dashboard"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.sachin.app.storyapp.ui.read.ReadFragment"
+        android:label="fragment_read"
+        tools:layout="@layout/fragment_read">
+        <argument
+            android:name="story_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_readFragment_to_rateDialogFragment"
+            app:destination="@id/rateDialogFragment" />
+        <action
+            android:id="@+id/action_readFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.sachin.app.storyapp.ui.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_nav_graph_compose"
+            app:destination="@id/nav_graph_compose" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+
+    <include app:graph="@navigation/nav_graph_home" />
+
+    <include app:graph="@navigation/nav_graph_compose" />
+
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.sachin.app.storyapp.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="story_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_readFragment"
+            app:destination="@id/readFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sachin.app.storyapp.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/rateDialogFragment"
+        android:name="com.sachin.app.storyapp.ui.read.RateDialogFragment"
+        android:label="RateDialogFragment"
+        tools:layout="@layout/fragment_rating">
+        <argument
+            android:name="story_id"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.sachin.app.storyapp.ui.read.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment">
+        <argument
+            android:name="story_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.sachin.app.storyapp.ui.profile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.sachin.app.storyapp.ui.admin.AdminFragment"
+        android:label="AdminFragment" >
+        <action
+            android:id="@+id/action_adminFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+
+</navigation>

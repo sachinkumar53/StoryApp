@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.login.LoginFragment">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup"
+        android:textAppearance="?textAppearanceDisplayMedium"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="We are happy to see you here!"
+        android:textAppearance="?textAppearanceBodyLarge"
+        android:textColor="?android:textColorSecondary" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/edittext_background_color"
+            app:shapeAppearanceOverlay="@style/CircleShapeAppearance" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/add_profile_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.66"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_add_image"
+            app:shapeAppearanceOverlay="@style/CircleShapeAppearance" />
+
+        <ProgressBar
+            android:id="@+id/profile_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/name_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/your_name"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/email_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirm_password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:hintEnabled="false"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/confirm_password_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/singup_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/signup"
+            android:theme="@style/ThemeOverlay.Secondary.Button" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.4" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textAppearance="?textAppearanceLabelMedium" />
+
+        <TextView
+            android:id="@+id/go_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="@string/login"
+            android:textAppearance="?textAppearanceLabelMedium"
+            android:textColor="#CA92F8" />
+    </LinearLayout>
+
+
+</LinearLayout>

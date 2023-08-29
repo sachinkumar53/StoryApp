@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:paddingVertical="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rate_this_story"
+            android:textAppearance="?attr/textAppearanceLabelLarge" />
+
+        <ImageView
+            android:id="@+id/more_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/ic_more"
+            android:visibility="gone"
+            app:tint="?colorOnBackground"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/not_rated_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rated_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_image_view"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:shapeAppearance="@style/CircleShapeAppearance"
+                tools:src="@tools:sample/avatars" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_name_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    tools:text="@tools:sample/full_names" />
+
+                <RatingBar
+                    android:id="@+id/my_rating_bar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:isIndicator="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_rating_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?textAppearanceHeadlineMedium"
+                tools:text="4.3" />
+
+            <TextView
+                android:id="@+id/total_rating_count_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.75"
+                android:textAppearance="?attr/textAppearanceBodySmall"
+                tools:text="Total rating (1.2k)" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StoryApp" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorSecondary">@color/pink</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.StoryApp" parent="Base.Theme.StoryApp" />
+
+    <style name="ThemeOverlay.Secondary.Button" parent="ThemeOverlay.Material3.Button">
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+</resources>

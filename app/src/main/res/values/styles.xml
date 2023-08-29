@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RoundCornerShapeOverlay">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="RoundCornerShapeOverlay.Small">
+        <item name="cornerSize">8dp</item>
+    </style>
+    <style name="RoundCornerShapeOverlay.Medium">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="CircleShapeAppearance">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ToggleImageButton">
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:background">@drawable/text_format_toggle_background</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="GenreChipStyle" parent="Widget.Material3.Chip.Assist">
+        <item name="chipMinHeight">24dp</item>
+        <item name="chipEndPadding">4dp</item>
+        <item name="chipStartPadding">4dp</item>
+        <item name="chipIconEnabled">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>
