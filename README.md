@@ -14,7 +14,7 @@ StoryScape is a creative storytelling Android app that empowers users to share t
 
 - **Platform:** Android
 - **Programming Languages:** Java, Kotlin
-- **Database:** SQLite
+- **Database:** Firebase Firestore
 - **Audio Integration:** Android Media Framework
 - **Networking:** Retrofit
 - **User Interface:** Android XML Layouts
